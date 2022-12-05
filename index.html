@@ -16,19 +16,19 @@
 </head>
 
 <body class="page">
-  <!-- Шапка сайту -->
+  <!------------------- Шапка сайту ------------------->
   <header class="page-header">
     <div class="container header-box">
       <a href="./index.html" class="logo">Web<span class="logo-accent">Studio</span></a>
       <nav>
         <ul class="site-nav list">
-          <li class="item">
-            <a href="./index.html" class="link current">Студія</a>
+          <li class="nav-item item">
+            <a href="./index.html" class="nav-link link current">Студія</a>
           </li>
-          <li class="item">
-            <a href="./portfolio.html" class="link">Портфоліо</a>
+          <li class="nav-item item">
+            <a href="./portfolio.html" class="nav-link link">Портфоліо</a>
           </li>
-          <li class="item"><a href="" class="link">Контакти</a></li>
+          <li class="nav-item item"><a href="" class="nav-link link">Контакти</a></li>
         </ul>
       </nav>
       <ul class="contact-nav list">
@@ -47,15 +47,15 @@
       </ul>
     </div>
   </header>
-  <!--  Герой   -->
+  <!------------------- Герой   ------------------->
   <main>
     <section class="section hero">
       <div class="container">
         <h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
-        <button type="button" class="button">Замовити послугу</button>
+        <button type="button" class="button" data-modal-open>Замовити послугу</button>
       </div>
     </section>
-    <!-- Переваги -->
+    <!------------------Переваги ------------------->
     <section class="section">
       <div class="container">
         <ul class="features list">
@@ -109,24 +109,33 @@
         </ul>
       </div>
     </section>
-    <!-- Чим ми займаємось -->
+    <!------------------ Чим ми займаємось ------------------->
     <section class="section no-padding">
       <div class="container">
         <h2 class="section-title work">Чим ми займаємося</h2>
         <ul class="list example">
           <li>
-            <img src="./images/example-1.jpg" alt="Створення сайту" width="370" height="294">
+            <div class="work-item">
+              <img src="./images/example-1.jpg" alt="Створення сайту" width="370" height="294">
+              <h3 class="work-title">Десктопні додатки</h3>
+            </div>
           </li>
           <li>
-            <img src="./images/example-2.jpg" alt="Адаптація сайту" width="370" height="294">
+            <div class="work-item">
+              <img src="./images/example-2.jpg" alt="Адаптація сайту" width="370" height="294">
+              <h3 class="work-title">Мобільні додатки</h3>
+            </div>
           </li>
           <li>
-            <img src="./images/example-3.jpg" alt="Дизайн" width="370" height="294">
+            <div class="work-item">
+              <img src="./images/example-3.jpg" alt="Дизайн" width="370" height="294">
+              <h3 class="work-title">Дизайнерські рішення</h3>
+            </div>
           </li>
         </ul>
       </div>
     </section>
-    <!-- Наша команда -->
+    <!------------------- Наша команда ------------------->
     <section class="section team-section">
       <div class="container">
         <h2 class="section-title team">Наша команда</h2>
@@ -282,7 +291,7 @@
         </ul>
       </div>
     </section>
-    <!-- Клієнти -->
+    <!------------------- Клієнти ------------------->
     <section class="section">
       <div class="container">
         <h2 class="section-title">Постійні клієнти</h2>
@@ -333,7 +342,7 @@
       </div>
     </section>
   </main>
-  <!-- Футер -->
+  <!------------------- Футер ------------------->
   <footer class="footer">
     <div class="footer-container container">
       <div>
@@ -389,5 +398,15 @@
       </div>
     </div>
   </footer>
+  <div class="backdrop is-hidden" data-modal>
+    <div class="modal">
+      <button type="button" class="close-modal" data-modal-close>
+        <svg width="18" height="18">
+          <use href="./images/icons.svg#icon-close"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+  <script src="./js/modal.js"></script>
 </body>
 </html>
